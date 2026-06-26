@@ -14,6 +14,7 @@ Each mission is a self-contained Colab notebook. Click a badge to open it instan
 | 06 | Advanced Arena agents | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/convexpi/missions/blob/main/missions/mission_06_advanced_agents/notebook.ipynb) |
 | 07 | Queue dynamics (L3) · *elective* | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/convexpi/missions/blob/main/missions/mission_07_queue_dynamics/notebook.ipynb) |
 | 08 | The cost of trading · *elective* | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/convexpi/missions/blob/main/missions/mission_08_cost_of_trading/notebook.ipynb) |
+| 09 | Pairs trading · *elective* | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/convexpi/missions/blob/main/missions/mission_09_pairs_trading/notebook.ipynb) |
 
 ## Prerequisites
 
