@@ -28,3 +28,24 @@ jobs:
         run: pip install --upgrade convexpi-lab convexpi-arena
       - name: Check notebook imports resolve
         run: python scripts/check_notebook_imports.py
+
+  # Full end-to-end execution of every notebook (submit + live-connect cells stubbed). Slow and
+  # network-dependent (yfinance), so nightly / manual only — not on every push/PR.
+  execute-notebooks:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install published packages + runtime
+        run: |
+          pip install --upgrade convexpi-lab convexpi-arena
+          pip install nbclient nbformat ipykernel matplotlib pandas numpy scikit-learn yfinance
+          python -m ipykernel install --user --name python3
+      - name: Execute notebooks
+        run: python scripts/run_notebooks.py
