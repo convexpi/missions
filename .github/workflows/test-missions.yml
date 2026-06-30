@@ -1,0 +1,30 @@
+name: Test missions
+
+# Guard against the failure that bit Mission 1: a symbol used by the notebooks (e.g. `submit`)
+# existing in the package source but not yet published to PyPI. Colab installs from PyPI, so we
+# check every notebook's convexpi imports against the PUBLISHED packages — not an editable/source
+# install. The nightly schedule catches PyPI drift even when this repo hasn't changed.
+on:
+  push:
+    paths:
+      - 'missions/**'
+      - 'starters/**'
+      - 'scripts/check_notebook_imports.py'
+      - '.github/workflows/test-missions.yml'
+  pull_request:
+  schedule:
+    - cron: '0 8 * * *'   # nightly
+  workflow_dispatch:
+
+jobs:
+  notebook-imports:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the PUBLISHED packages (mirrors Colab)
+        run: pip install --upgrade convexpi-lab convexpi-arena
+      - name: Check notebook imports resolve
+        run: python scripts/check_notebook_imports.py
