@@ -1,6 +1,12 @@
 # Mission 1: The Overfitting Game
 
-**Notebook:** `missions/mission_01_overfitting/notebook.ipynb`
+**Notebooks** — pick your language; the grader scores all three identically:
+
+| Language | Notebook |
+|---|---|
+| Python | `missions/mission_01_overfitting/notebook.ipynb` |
+| R | `missions/mission_01_overfitting/notebook_r.ipynb` |
+| Julia | `missions/mission_01_overfitting/notebook_julia.ipynb` |
 
 ## Learning objectives
 
