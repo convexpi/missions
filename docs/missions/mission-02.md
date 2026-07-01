@@ -1,6 +1,12 @@
 # Mission 2: Market Maker
 
-**Notebook:** `missions/mission_02_marketmaker/notebook.ipynb`
+**Notebooks** — pick your language; all three trade the same live Arena:
+
+| Language | Notebook |
+|---|---|
+| Python | `missions/mission_02_marketmaker/notebook.ipynb` |
+| R | `missions/mission_02_marketmaker/notebook_r.ipynb` |
+| Julia | `missions/mission_02_marketmaker/notebook_julia.ipynb` |
 
 ## Learning objectives
 
