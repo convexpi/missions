@@ -32,8 +32,8 @@ cells.append(md("## Part 0: Setup"))
 
 cells.append(code(r"""
 if (!requireNamespace("convexpi", quietly = TRUE)) {
-  install.packages("convexpi",
-    repos = c("https://convexpi.r-universe.dev", "https://cloud.r-project.org"))
+  if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+  remotes::install_github("convexpi/convexpi-r", upgrade = "never")
 }
 library(convexpi)
 if (!reticulate::py_module_available("convexpi.lab")) {

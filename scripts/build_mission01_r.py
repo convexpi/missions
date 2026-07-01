@@ -41,11 +41,10 @@ apart out-of-sample. This mission makes that gap visible, then shows the cure.
 cells.append(md("## Part 0: Setup"))
 
 cells.append(code(r"""
-# Install the convexpi R package (market data + one-call submit).
-# R-universe serves prebuilt binaries; falls back to source from CRAN mirror.
+# Install the convexpi R package (market data + one-call submit) from GitHub.
 if (!requireNamespace("convexpi", quietly = TRUE)) {
-  install.packages("convexpi",
-    repos = c("https://convexpi.r-universe.dev", "https://cloud.r-project.org"))
+  if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+  remotes::install_github("convexpi/convexpi-r", upgrade = "never")
 }
 library(convexpi)
 
