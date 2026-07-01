@@ -4,7 +4,7 @@ Missions are the core learning units. Each is a self-contained Jupyter notebook 
 
 The notebooks live in `missions/` in the repo and can be opened in Google Colab with one click.
 
-Missions **1, 3, 4, 8, and 9** are available in **Python, R, and Julia** — the same mission, scored by the same engine. Look for `notebook.ipynb` (Python), `notebook_r.ipynb` (R), and `notebook_julia.ipynb` (Julia) in each mission folder.
+Missions **1, 3, 4, 5, 8, and 9** are available in **Python, R, and Julia** — the same mission, scored by the same engine. Look for `notebook.ipynb` (Python), `notebook_r.ipynb` (R), and `notebook_julia.ipynb` (Julia) in each mission folder.
 
 | # | Mission | Core concept | Skills |
 |---|---|---|---|
