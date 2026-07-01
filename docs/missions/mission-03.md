@@ -1,6 +1,12 @@
 # Mission 3: Alpha Discovery
 
-**Notebook:** `missions/mission_03_alpha_discovery/notebook.ipynb`
+**Notebooks** — pick your language; the grader scores all three identically:
+
+| Language | Notebook |
+|---|---|
+| Python | `missions/mission_03_alpha_discovery/notebook.ipynb` |
+| R | `missions/mission_03_alpha_discovery/notebook_r.ipynb` |
+| Julia | `missions/mission_03_alpha_discovery/notebook_julia.ipynb` |
 
 ## Learning objectives
 
